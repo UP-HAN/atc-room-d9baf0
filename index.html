@@ -44,7 +44,7 @@ details.raw{margin-top:10px}details summary{cursor:pointer;color:var(--acc);font
 .bar{height:8px;background:#e5e7eb;border-radius:999px;overflow:hidden;margin:6px 0 2px}.bar i{display:block;height:100%;background:var(--acc)}
 footer{text-align:center;color:var(--mut);font-size:12px;padding:20px}
 </style></head><body>
-<header><h1>ATC Circle 0 소통방🙌</h1><p>누적 정리 · 마지막 갱신 2026-11-05 12:01</p>
+<header><h1>ATC Circle 0 소통방🙌</h1><p>누적 정리 · 마지막 갱신 2026-11-05 12:02</p>
 <div class="upd">📅 이 사이트는 <b>평일 아침 9시</b>에 자동으로 갱신됩니다.</div></header>
 <nav><a href="#today" data-go="today">최근</a><a href="#missions" data-go="missions">미션</a><a href="#trainings" data-go="trainings">진행 중인 연수</a><a href="#dates" data-go="dates">날짜별</a><a href="#useful" data-go="useful">유용한 정보</a></nav>
 <main>
@@ -420,7 +420,7 @@ footer{text-align:center;color:var(--mut);font-size:12px;padding:20px}
     if(views.indexOf(sec)<0) sec="today";
     views.forEach(function(x){document.getElementById(x).classList.toggle("on",x===sec);});
     document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("on",a.dataset.go===sec);});
-    var list=document.querySelectorAll("#missions .scard, #missions .lead");
+    var list=document.querySelectorAll("#missions .scard, #missions .lead, #missions > .note");
     document.querySelectorAll(".sview").forEach(function(v){ v.hidden=!(sview && v.id===sview+"-view"); });
     list.forEach(function(c){ c.style.display=sview?"none":""; });
     if(h.indexOf("day-")===0||h.indexOf("x-")===0){ var t=document.getElementById(h); if(t) setTimeout(function(){t.scrollIntoView();},0); } else window.scrollTo(0,0);
